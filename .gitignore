@@ -1,0 +1,6 @@
+Cpp_Sources/*.o
+Cpp_Sources/*.os
+Cpp_Sources/*.so
+Cpp_Sources/.sconsign.dblite
+Godot_Sources/.godot
+Godot_Sources/addons/RockBomberLib/bin/*

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cngibn4fm56ow"]
+
+[ext_resource type="Texture2D" uid="uid://dsm43ek66pqb6" path="res://Sprites/other/rock.png" id="1_tkwux"]
+
+[node name="RockSprite2D" type="Sprite2D"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_tkwux")
+offset = Vector2(-5, 0)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckkxk1tgiag3t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2j6xc"]
+radius = 50.0
+height = 140.0
+
+[node name="Explosion_Area2D" type="Area2D"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CapsuleShape2D_2j6xc")
