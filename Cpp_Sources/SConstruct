@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+import os
+import sys
+
+env = SConscript("../../godot-cpp/SConstruct")
+env.Append(CPPPATH=['./'])
+cpp_source_files = Glob('./*.cpp')
+cpp_source_files.extend(Glob('./Tools/*.cpp'))
+
+lib_path='../../godot-cpp/bin'
+env.Append(LIBPATH=[lib_path])
+env.Precious(lib_path) # Preventing anything in the lib path from being deleted
+
+# SharedLibrary generic code block
+if env["platform"] == "macos":
+    library = env.SharedLibrary(
+        "libRockBomber.{}.{}.framework/libRockBomber.{}.{}".format(
+            env["platform"], env["target"], env["platform"], env["target"]
+        ),
+        source=cpp_source_files,
+        LIBS=["godot-cpp{}{}".format(env["suffix"], env["LIBSUFFIX"])]
+    )
+else:
+    library = env.SharedLibrary(
+        "libRockBomber{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
+        source=cpp_source_files,
+        LIBS=["godot-cpp{}{}".format(env["suffix"], env["LIBSUFFIX"])]
+    )
+
+Default(library)

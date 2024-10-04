@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cap4j52h8ayv3"]
+
+[ext_resource type="Texture2D" uid="uid://dl0yhilrk7wwl" path="res://Sprites/other/bomb.png" id="1_ceye3"]
+
+[node name="BombSprite2D" type="Sprite2D"]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_ceye3")
+offset = Vector2(9, -36)

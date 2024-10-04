@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://iv145nd2031c"]
+
+[ext_resource type="Texture2D" uid="uid://bkn35ennxcla1" path="res://Sprites/other/explosion.png" id="1_cinpq"]
+
+[node name="Explosion_Sprite2D" type="Sprite2D"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_cinpq")
+offset = Vector2(17, -32)

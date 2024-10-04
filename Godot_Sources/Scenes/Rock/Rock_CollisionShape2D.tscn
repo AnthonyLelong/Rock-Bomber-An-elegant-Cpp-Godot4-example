@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://nlc63l7mqgcl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kl6c"]
+size = Vector2(65, 75)
+
+[node name="Rock_CollisionShape2D" type="CollisionShape2D"]
+shape = SubResource("RectangleShape2D_6kl6c")
